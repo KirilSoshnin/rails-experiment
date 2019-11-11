@@ -99,5 +99,13 @@ rails db:migrate
 For example, run the following command to create a scaffold of a blog:
 
 ```
-rails g scaffold post title:string body:text
+rails g scaffold Post title:string body:text
+```
+
+### Controllers
+
+For example, run the following command to create a controller for pages:
+
+```
+rails g controller Pages home about contact
 ```
