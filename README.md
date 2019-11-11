@@ -104,8 +104,30 @@ rails g scaffold Post title:string body:text
 
 ### Controllers
 
-For example, run the following command to create a controller for pages:
+For example, run the following command to create a controller for pages (plurial):
 
 ```
 rails g controller Pages home about contact
 ```
+
+### Models
+
+For example, run the following command to create a model for skill (singular):
+
+```
+rails g model Skill title:string percent_utilized:integer
+```
+
+Run `rails db:migrate` to update the schema.
+
+To connect directly to the database, run `rails c` to open the console.
+
+Then, to create a record for the Skill model, run:
+
+```
+Skill.create!(title: "Rails", percent_utilized: 75)
+```
+
+(add `!` to throw errors)
+
+Then, to show records, run `Skill.all`.
