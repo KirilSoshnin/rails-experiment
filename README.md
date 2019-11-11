@@ -131,3 +131,13 @@ Skill.create!(title: "Rails", percent_utilized: 75)
 (add `!` to throw errors)
 
 Then, to show records, run `Skill.all`.
+
+### Resources
+
+For example, run the following command to create a resource (minimalistic scaffold) for the portfolio (singular):
+
+```
+rails g resource Portfolio title:string subtitle:text body:text main_image:text thumb_image:text
+```
+
+Don't forget to run `rails db:migrate` to update the schema.
