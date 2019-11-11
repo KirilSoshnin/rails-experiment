@@ -159,3 +159,15 @@ To configure generators, you can add the following to `config/application.rb`:
 Then, to customize the templates, override files through the `lib/` directory.
 
 For more info: [https://guides.rubyonrails.org/generators.html](https://guides.rubyonrails.org/generators.html)
+
+### Seeds
+
+Add records to seed your database in the `db/seeds.rb` file.
+
+Then, run the following command:
+
+```
+rails db:setup
+```
+
+(Careful, it will erase all existing data before running the seed file.)
