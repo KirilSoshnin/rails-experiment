@@ -141,3 +141,21 @@ rails g resource Portfolio title:string subtitle:text body:text main_image:text 
 ```
 
 Don't forget to run `rails db:migrate` to update the schema.
+
+### Generator Configuration
+
+To configure generators, you can add the following to `config/application.rb`:
+
+```
+   config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :erb
+      g.test_framework  :test_unit, fixture: false
+      g.stylesheets     false
+      g.javascripts     true
+   end
+```
+
+Then, to customize the templates, override files through the `lib/` directory.
+
+For more info: [https://guides.rubyonrails.org/generators.html](https://guides.rubyonrails.org/generators.html)
