@@ -14,13 +14,24 @@ Below are some helpful notes.
 The following extensions are recommended:
 
 - Ruby
-- Rubocop
 - Prettier - Code formatter
 
-For Rubocop, you will also need to install its gem (preferrably in a global gemset):
+You will also need to install this gem (preferrably in a global gemset with RVM so that you can re-use it in other projects):
 
 ```
 gem install rubocop
+```
+
+Then, add the following to the `.vscode/settings.json` file:
+
+```
+{
+  "ruby.useLanguageServer": true,
+  "ruby.format": false,
+  "ruby.lint": {
+    "rubocop": true
+  }
+}
 ```
 
 To install the Ruby plugin for Prettier, run the following commands:
