@@ -182,3 +182,9 @@ rails db:setup
 ```
 
 (Careful, it will erase all existing data before running the seed file.)
+
+### Routes
+
+Manage your app's routes via the `config/routes.rb` file.
+
+You can also run the command `rails routes` to view all existing routes, their URI pattern and controller action.
