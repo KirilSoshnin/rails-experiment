@@ -170,3 +170,33 @@ To configure generators, you can add the following to `config/application.rb`:
 Then, to customize the templates, override files through the `lib/` directory.
 
 For more info: [https://guides.rubyonrails.org/generators.html](https://guides.rubyonrails.org/generators.html)
+
+### Seeds
+
+Add records to seed your database in the `db/seeds.rb` file.
+
+Then, run the following command:
+
+```
+rails db:setup
+```
+
+(Careful, it will erase all existing data before running the seed file.)
+
+### Routes
+
+Manage your app's routes via the `config/routes.rb` file.
+
+You can also run the command `rails routes` to view all existing routes, their URI pattern and controller action.
+
+### Migration
+
+For example, if you need to add something to the database, you can run:
+
+```
+rails g migration add_slug_to_blogs slug:string:uniq
+```
+
+(`add` and `blogs` means we will add something to the `blogs` table)
+
+This will create a new migration file. Then run `rails db:migrate`.
