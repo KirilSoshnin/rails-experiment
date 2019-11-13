@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'pages#contact'
 
-  resources :blogs
+  resources :blogs do
+    member { get :toggle_status }
+  end
 
   root to: 'pages#home'
 end
