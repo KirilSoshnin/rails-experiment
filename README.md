@@ -188,3 +188,15 @@ rails db:setup
 Manage your app's routes via the `config/routes.rb` file.
 
 You can also run the command `rails routes` to view all existing routes, their URI pattern and controller action.
+
+### Migration
+
+For example, if you need to add something to the database, you can run:
+
+```
+rails g migration add_slug_to_blogs slug:string:uniq
+```
+
+(`add` and `blogs` means we will add something to the `blogs` table)
+
+This will create a new migration file. Then run `rails db:migrate`.
