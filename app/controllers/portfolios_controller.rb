@@ -24,6 +24,28 @@ class PortfoliosController < ApplicationController
   end
   # rubocop:enable Metrics/MethodLength
 
+  def edit
+    @portfolio_item = Portfolio.find(params[:id])
+  end
+
+  # rubocop:disable Metrics/MethodLength
+  def update
+    @portfolio_item = Portfolio.find(params[:id])
+    respond_to do |format|
+      if @portfolio_item.update(portfolio_params)
+        format.html do
+          redirect_to portfolios_path,
+                      notice: 'The portfolio item was successfully updated.'
+        end
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+  # rubocop:enable Metrics/MethodLength
+
+  private
+
   # Never trust parameters from the scary internet, only allow the white list through.
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body)
