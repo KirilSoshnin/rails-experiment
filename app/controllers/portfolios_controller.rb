@@ -3,8 +3,17 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def angular
+    @portfolio_items = Portfolio.angular
+  end
+
+  def ruby_on_rails
+    @portfolio_items = Portfolio.ruby_on_rails
+  end
+
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   # rubocop:disable Metrics/MethodLength
@@ -64,6 +73,11 @@ class PortfoliosController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body)
+    params.require(:portfolio).permit(
+      :title,
+      :subtitle,
+      :body,
+      technologies_attributes: %i[name]
+    )
   end
 end
