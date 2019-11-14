@@ -5,12 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times { |topic| Topic.create!(title: "Topic #{topic}") }
+
+puts '3 topics created'
 
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
     body:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    topic_id: Topic.last.id
   )
 end
 
@@ -20,10 +24,21 @@ puts '10 blog posts created'
 
 puts '5 skills created'
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio item #{portfolio_item}",
-    subtitle: 'Lorem ipsum dolor sit amet',
+    subtitle: 'Ruby on Rails',
+    body:
+      'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    main_image: 'http://placehold.it/600/400',
+    thumb_image: 'http://placehold.it/300/150'
+  )
+end
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio item #{portfolio_item}",
+    subtitle: 'Angular',
     body:
       'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     main_image: 'http://placehold.it/600/400',
