@@ -29,9 +29,7 @@ puts '5 skills created'
     title: "Portfolio item #{portfolio_item}",
     subtitle: 'Ruby on Rails',
     body:
-      'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    main_image: 'http://placehold.it/600/400',
-    thumb_image: 'http://placehold.it/300/150'
+      'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   )
 end
 
@@ -40,9 +38,7 @@ end
     title: "Portfolio item #{portfolio_item}",
     subtitle: 'Angular',
     body:
-      'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    main_image: 'http://placehold.it/600/400',
-    thumb_image: 'http://placehold.it/300/150'
+      'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   )
 end
 
