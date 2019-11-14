@@ -7,3 +7,6 @@ Metrics/MethodLength:
 Metrics/ClassLength:
   Exclude:
     - "db/**/*"
+Style/StringLiterals:
+  Exclude:
+    - "db/**/*"
