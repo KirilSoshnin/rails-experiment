@@ -96,6 +96,15 @@ Use the `--skip-coffee` and `--database=postgresql` flags as needed.
 
 You can also use `-B` to skip bundle install and `-T` to exclude tests.
 
+NOTE: Depending on the Rails version, you might need to install a specific version of the `bundler` gem in your global gemset.
+
+For example, with Rails 5.0.2, you need to run the following commands:
+
+```
+rvm gemset use global
+gem install bundler -v 1.17.3
+```
+
 ### Database
 
 To create and migrate the database, run:
