@@ -89,6 +89,8 @@ GEM
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    petergate (2.0.1)
+      activerecord (> 4.0.0)
     pg (0.21.0)
     popper_js (1.14.5)
     pry (0.12.2)
@@ -194,6 +196,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  petergate (~> 2.0, >= 2.0.1)
   pg (~> 0.18)
   pry-byebug
   puma (~> 3.0)
