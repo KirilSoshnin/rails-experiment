@@ -1,6 +1,7 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: %i[edit show update destroy]
   layout 'portfolio'
+  access all: %i[show index angular], user: { except: %i[destroy new create update edit] }, site_admin: :all
 
   def index
     @portfolio_items = Portfolio.all
@@ -56,7 +57,7 @@ class PortfoliosController < ApplicationController
   def show; end
 
   def destroy
-    @portfolio_item.destroy
+    @portfolio_item.destroys
     respond_to do |format|
       format.html do
         redirect_to portfolios_url,
