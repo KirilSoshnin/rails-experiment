@@ -57,3 +57,5 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 
 gem 'bootstrap', '~> 4.3.1'
+
+gem 'rails_experiment_view_tool', git: 'https://github.com/KirilSoshnin/rails_experiment_view_tool'
